@@ -1,0 +1,65 @@
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:rgba(34, 38, 42, 0.54);
+    display:none;
+    justify-content: center;
+    align-items: center;
+    z-index:9999;
+  }
+  
+  .load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*change these sizes to fit into your project*/
+    width: 70px;
+    height: 70px;
+  }
+  .load hr {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite;
+  }
+  
+  .load :first-child {
+    background: #333;
+    animation-delay: -1.5s;
+  }
+  .load :nth-child(2) {
+    background: #333;
+    animation-delay: -1s;
+  }
+  .load :nth-child(3) {
+    background: #333;
+    animation-delay: -0.5s;
+  }
+  .load :last-child {
+    background: #333;
+  }
+  
+  @keyframes spin {
+    0%,
+    100% {
+      transform: translate(0);
+    }
+    25% {
+      transform: translate(160%);
+    }
+    50% {
+      transform: translate(160%, 160%);
+    }
+    75% {
+      transform: translate(0, 160%);
+    }
+  }
+  
